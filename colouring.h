@@ -35,8 +35,7 @@ i recommend this palette:
 	30 = dark grass blue;
 	31 = a lil bit dark grass blue;
 	32 = very contrasting light blue.
-sure, ANSI has 256 colours, but man, you think im going to write all that in a comment? + this game is designed for windows,
-which sure supported only 16 colours before windows 10
+sure, ANSI has 256 colours, but man, you think im going to write all that in a comment?
 */
 void colour(int colour) {
 	std::cout << "\x1b[38;5;" << colour << "m"; // guess this stuff is understandable. this is just outputting the ANSI code for the colour to be as it is planned to be
