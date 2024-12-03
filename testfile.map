@@ -1,0 +1,26 @@
+
+//Just a example of a valid map, nothing more
+// the game doesn't has a parser for them btw, there's nothing. go to testgame.cpps
+#define TestMap
+#define WIDTH 16
+#define HEIGHT 16
+#include "testgame.cpp"
+// ^ include the game to make a valid game space
+space gamespace[WIDTH][HEIGHT]; // creating a array containing the game map
+for (int x = 0; x<15; x++) {
+	// here, we are going through x 0-15 and y 0-15 to make them a valid place,
+	// so hopefully the game wont crash
+	for (int y = 0; y<15;y++){
+		gamespace[x][y] = space::nothing; // doing whatever the comment above this said
+	}		
+}
+
+// setting it up, so the map won't be something empty
+
+gamespace[0][0] = space::player; // set player on 0, 0
+gamespace[15][15] = space::apple; // set apple on 15, 15
+for (int i = 0; i<6; i++) {
+	// placing walls on 0, 0-5. fun fact: im writing this in windows notepad
+	//gamespace[0][i] = space::wall;
+	// ^ is commented because i didn't implement walls yet, but normally it would place them.
+}
